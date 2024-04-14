@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+:root {
+  --background-color: rgb(255, 208, 236, 0.5);
+  --navbar: rgb(129, 104, 157);
+  --support-color: rgb(71, 79, 122);
+  --text-color: rgb(31, 37, 68);
+  --text-white: rgb(255, 255, 255);
+  --surface-color: rgb(129, 104, 157);
+  --curve: 40;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--support-color);
+  border-radius: 3px;
+}
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Anta", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.page {
+  width: 100vw;
+  height: 100%;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+.page-p1 {
+  width: 100%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+  background: url(../images/hero.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  gap: 0;
+  color: var(--text-white);
+  justify-content: center;
+  flex-direction: column;
+}
+.SearchBox h1 {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 20px;
+  font-weight: 100;
+  backdrop-filter: blur(10px) saturate(70%);
+  border-radius: 20px;
+  flex-shrink: 2;
+}
+.SearchBox {
+  width: 80%;
+  max-width: 100%;
+  height: 60%;
+  align-self: center;
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  justify-self: flex-end;
+  color: var(--text-color);
+}
+.SearchBox form {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.form-control,
+.form-btn {
+  width: 100%;
+  height: 40%;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.form-btn {
+  background-color: var(--navbar);
+  font-weight: 400;
+  font-family: "Anta", sans-serif;
+  border: 3px solid var(--text-color);
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  text-wrap: nowrap;
+}
+input.form-control {
+  width: 200%;
+}
+input.form-control::placeholder {
+  color: var(--text-color);
+}
+
+/* ================================================================================================================================================ */
+.page-p2 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.buy {
+  width: 40%;
+  height: 80%;
+  background: url(../images/rental.jpg);
+  background-size: cover;
+}
+.buy-text {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.page-p2 button {
+  border-radius: 25px;
+  width: 20%;
+  height: 20%;
+  background-color: var(--background-color);
+  border: 5px solid var(--support-color);
+  transform: scale(1);
+  font-family: "Anta", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.page-p2 button:active {
+  background-color: var(--background-color);
+  transform: scale(1.1);
+  transition-delay: 2ms;
+}
+.page-p2 button a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+/* ================================================================================================================================================ */
+
+.page1 {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgb(255, 208, 236, 0.7),
+      rgb(255, 208, 236, 0.7)
+    ),
+    url("../images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page1 h1 {
+  font-size: 3.8rem;
+  text-align: center;
+}
+.page1 a {
+  width: 100%;
+  height: 10%;
+  margin-top: auto;
+}
+.page1 button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--navbar);
+}
+.cards {
+  list-style: none;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card {
+  background-color: var(--support-color);
+  height: 80%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  display: flex;
+  color: #fff;
+  width: 25%;
+}
+.card:hover {
+  color: var(--text-color);
+}
+
+.c1 {
+  background-image: url(../images/1.jpg);
+  background-size: cover;
+}
+.c2 {
+  background-image: url(../images/2.jpg);
+  background-size: cover;
+}
+.c3 {
+  background-image: url(../images/3.jpg);
+  background-size: cover;
+}
+.c1:hover {
+  background-image: linear-gradient(
+      to right,
+      rgb(255, 208, 236, 0.7),
+      rgb(255, 208, 236, 0.7)
+    ),
+    url(../images/1.jpg);
+  background-size: cover;
+}
+.c2:hover {
+  background-image: linear-gradient(
+      to right,
+      rgb(255, 208, 236, 0.7),
+      rgb(255, 208, 236, 0.7)
+    ),
+    url(../images/2.jpg);
+  background-size: cover;
+}
+.c3:hover {
+  background-image: linear-gradient(
+      to right,
+      rgb(255, 208, 236, 0.7),
+      rgb(255, 208, 236, 0.7)
+    ),
+    url(../images/3.jpg);
+  background-size: cover;
+}
+.card .card-text {
+  align-self: flex-end;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-text h4,
+p {
+  margin: 0px 10px;
+  text-align: center;
+}
+/* ================================================================================ */
+.page2 {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.add-image {
+  width: 40%;
+  height: 80%;
+  background: center/cover url(../images/Image-bg-add.jpg);
+  border-radius: 25px;
+}
+.add-form {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.add-form h1 {
+  align-self: center;
+  font-size: 4rem;
+}
+.page2 form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 100%;
+
+  color: var(--text-color);
+}
+.page2 form input,
+.page2 form select,
+.page2 form button {
+  width: 100%;
+  height: 10%;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  background-color: var(--navbar);
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+.page2 form input::placeholder,
+.page2 form textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 1rem;
+}
+.page2 form textarea::-webkit-scrollbar {
+  display: none;
+}
+.file {
+  width: 100%;
+  height: 10%;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  background-color: var(--navbar);
+  border: 2px solid var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#text {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+.file input::file-selector-button {
+  color: var(--text-color);
+  background-color: var(--navbar);
+  border: 5px solid var(--background-color);
+  margin: 2px 30px;
+}
+.page2 form input[type="text"] {
+  padding: 0px 15px;
+}
+.page2 form textarea {
+  resize: none;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  border: 2px solid var(--navbar);
+  color: var(--text-color);
+  padding: 0px 15px;
+  background-color: var(--navbar);
+}
+.page2 form label {
+  padding-left: 13px;
+}
+.page2 form select {
+  padding: 0 10px;
+}
+/* ============================================================================ */
+.page3 {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--background-color);
+}
+.about-banner {
+  width: 100%;
+  height: 40%;
+  background: center/cover url(../images/banner-about.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-banner h1 {
+  backdrop-filter: blur(50px);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 4rem;
+}
+.about-text {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  margin: 20px 0;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.text-i {
+  border-radius: 25px;
+  width: 80%;
+  max-width: 80%;
+  max-height: 100%; /* Add this line to ensure it doesn't exceed the parent width */
+  text-align: center;
+  background: var(--navbar);
+  padding: 10px;
+  flex-shrink: 1; /* Add this line to allow the div to shrink */
+  overflow: scroll; /* Add this line to hide overflowing content */
+}
+.text-i::-webkit-scrollbar {
+  width: 0px;
+}
+
+hr {
+  background-color: var(--navbar);
+  height: 10px;
+}
+@media (max-width: 400px) {
+}
+@media only screen and (max-width: 806px) {
+  body {
+    font-size: 1rem;
+  }
+  .page1,
+  .page2,
+  .page3 {
+    height: auto;
+    min-height: 100%;
+  }
+  .SearchBox {
+    margin: 0;
+    width: 90%;
+  }
+  .SearchBox h1 {
+    font-size: 2rem;
+  }
+  .SearchBox form {
+    flex-direction: column;
+    gap: 5px;
+  }
+  input.form-control {
+    width: 100%;
+  }
+  .form-btn {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    padding: 3px;
+  }
+  .page1 h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .add-form h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center;
+    gap: 5px;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: nowrap; /* Center cards horizontally */
+  }
+  .card {
+    width: 80%;
+  }
+  .about-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .page2 {
+    flex-direction: column;
+  }
+  .add-image {
+    margin-top: 20px;
+    width: 90vw;
+    height: 30vh;
+  }
+  .add-form {
+    width: 80%;
+  }
+  .page2 form button {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  .about-banner {
+    height: 40vh;
+  }
+  .file input::file-selector-button {
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  .page-p2 button {
+    width: fit-content;
+    padding: 10px;
+  }
+}
